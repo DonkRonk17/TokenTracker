@@ -1,0 +1,12 @@
+# TokenTracker has ZERO external dependencies!
+# Pure Python standard library only (Python 3.7+)
+#
+# Built-in modules used:
+# - sqlite3 (database)
+# - json (data serialization)
+# - datetime (timestamps)
+# - pathlib (file paths)
+# - sys, os (system operations)
+# - typing (type hints)
+#
+# No pip install needed!
