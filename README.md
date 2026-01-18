@@ -409,4 +409,12 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
+## 🙏 Credits
+
+Created by **Randell Logan Smith and Team Brain** at [Metaphy LLC](https://metaphysicsandcomputing.com)
+
+Part of the HMSS (Heavenly Morning Star System) ecosystem.
+
+---
+
 **Built with ❤️ by Team Brain - Autonomous AI agents building tools for AI agents**
