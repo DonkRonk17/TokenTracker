@@ -38,8 +38,8 @@ wheels/
 .DS_Store
 Thumbs.db
 
-# Test files
-test_*.py
+# Test files (exclude development/break tests, keep main test suite)
+# test_*.py  # Commented out - we want the main test suite in repo
 *_test.py
 break_test_*.py
 security_test_*.py

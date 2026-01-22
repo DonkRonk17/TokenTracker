@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-TokenTracker v0.1 - Real-time Token Usage Monitor for Team Brain
+TokenTracker v1.0 - Real-time Token Usage Monitor for Team Brain
 
 Zero dependencies, cross-platform token tracking for AI agents.
 Monitors usage, enforces budgets, generates reports.
@@ -482,7 +482,7 @@ def main():
     
     if len(sys.argv) < 2:
         print("""
-TokenTracker v0.1 - Token Usage Monitor for Team Brain
+TokenTracker v1.0 - Token Usage Monitor for Team Brain
 
 USAGE:
   tokentracker.py log <agent> <model> <input_tokens> <output_tokens> [notes]

@@ -1,0 +1,201 @@
+# TokenTracker - Quick Reference Cheat Sheet
+
+30-second reference for common TokenTracker commands
+
+---
+
+## 🚀 MOST COMMON COMMANDS
+
+### Log Token Usage (After Your Session)
+```bash
+python tokentracker.py log YOUR_AGENT YOUR_MODEL INPUT_TOKENS OUTPUT_TOKENS "Task description"
+```
+
+### Check Budget Status
+```bash
+python tokentracker.py budget
+```
+
+### View Today's Usage
+```bash
+python tokentracker.py summary today
+```
+
+---
+
+## 👥 YOUR AGENT NAME
+
+Replace `YOUR_AGENT` with:
+- `FORGE` - if you're Opus 4.5 (Orchestrator)
+- `ATLAS` - if you're Sonnet 4.5 (Executor)
+- `CLIO` - if you're Ubuntu/Linux agent
+- `NEXUS` - if you're Multi-platform agent
+- `BOLT` - if you're Cline/Grok (Free tier)
+- `GEMINI` - if you're Extension agent
+
+---
+
+## 🤖 YOUR MODEL NAME
+
+Replace `YOUR_MODEL` with:
+- `opus-4.5` - Claude Opus 4.5
+- `sonnet-4.5` - Claude Sonnet 4.5
+- `haiku-3.5` - Claude Haiku 3.5
+- `grok` - Grok (free)
+- `gemini` - Gemini (extension)
+
+---
+
+## 💡 REAL EXAMPLES
+
+```bash
+# FORGE after orchestration
+python tokentracker.py log FORGE opus-4.5 30000 10000 "Reviewed TokenTracker"
+
+# ATLAS after building
+python tokentracker.py log ATLAS sonnet-4.5 50000 15000 "Built TokenTracker"
+
+# CLIO after Linux work
+python tokentracker.py log CLIO haiku-3.5 10000 5000 "Tested on Ubuntu"
+
+# NEXUS after testing
+python tokentracker.py log NEXUS sonnet-4.5 20000 8000 "Multi-platform test"
+
+# BOLT after free execution
+python tokentracker.py log BOLT grok 15000 5000 "Ran branding script"
+```
+
+---
+
+## 📊 CHECKING USAGE
+
+### Today's Summary
+```bash
+python tokentracker.py summary today
+```
+
+### This Week
+```bash
+python tokentracker.py summary week
+```
+
+### This Month
+```bash
+python tokentracker.py summary month
+```
+
+### Budget Status
+```bash
+python tokentracker.py budget
+```
+
+---
+
+## 📝 EXPORT REPORTS
+
+### Text Report (Human Readable)
+```bash
+python tokentracker.py report month text
+```
+
+### JSON Report (Machine Readable)
+```bash
+python tokentracker.py report month json > report.json
+```
+
+---
+
+## 🔧 PYTHON API (For Automation)
+
+```python
+from tokentracker import TokenTracker
+
+tracker = TokenTracker()
+
+# Log usage
+tracker.log_usage("YOUR_AGENT", "your-model", input_tokens, output_tokens, notes="Task")
+
+# Check budget
+budget = tracker.get_budget_status()
+if budget['percent_used'] > 80:
+    print(f"[WARNING] Budget at {budget['percent_used']:.1f}%!")
+
+# Get summary
+summary = tracker.get_usage_summary("today")
+print(f"Today's cost: ${summary['total_cost']:.2f}")
+```
+
+---
+
+## 🎯 BUDGET MANAGEMENT
+
+### Set Monthly Budget
+```bash
+python tokentracker.py set-budget 2026-01 60.00
+```
+
+### Check If Over Budget
+```bash
+python tokentracker.py budget | grep "Status"
+```
+
+---
+
+## 📍 FILE LOCATION
+
+**Windows:** `C:\Users\logan\OneDrive\Documents\AutoProjects\TokenTracker\`  
+**GitHub:** https://github.com/DonkRonk17/TokenTracker  
+**Clone:** `git clone https://github.com/DonkRonk17/TokenTracker.git`
+
+---
+
+## ❓ HELP
+
+### Show All Commands
+```bash
+python tokentracker.py
+```
+
+### Full Documentation
+- See `README.md` for comprehensive guide
+- See `EXAMPLES.md` for 10 working examples
+
+---
+
+## 🚨 TROUBLESHOOTING
+
+### Error: "Agent name cannot be empty"
+→ Make sure you included YOUR_AGENT name
+
+### Error: "Input tokens cannot be negative"
+→ Check your token counts are positive numbers
+
+### Error: "Module not found"
+→ Run from TokenTracker directory or add to PYTHONPATH
+
+### Database locked
+→ Close any other TokenTracker processes
+
+---
+
+## 🎓 TIPS
+
+1. **Log immediately after sessions** - Don't wait, you'll forget
+2. **Estimate if unsure** - Better to log estimate than not log
+3. **Use notes field** - Helps identify expensive tasks later
+4. **Check budget before big tasks** - Avoid overruns
+5. **Review weekly** - Identify optimization opportunities
+
+---
+
+## 📞 SUPPORT
+
+- **Issues:** Reply via SynapseLink to ATLAS
+- **Bugs:** https://github.com/DonkRonk17/TokenTracker/issues
+- **Questions:** Check README.md and EXAMPLES.md first
+
+---
+
+**Created:** January 17, 2026  
+**Version:** 1.0  
+**By:** Atlas (Sonnet 4.5) - Team Brain
