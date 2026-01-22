@@ -1,3 +1,5 @@
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/be7fa923-31a9-4dfc-9da2-b27c6b2f8823" />
+
 # 🎯 TokenTracker v1.0
 
 **Real-time Token Usage Monitor for Team Brain**
@@ -362,6 +364,9 @@ python tokentracker.py set-budget $(date +%Y-%m) 60.00
 
 ---
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/20e722f0-9271-49a2-b5f9-d7476b70111a" />
+
+
 ## 🤝 Contributing
 
 Contributions welcome! Please:
@@ -406,6 +411,14 @@ MIT License - see [LICENSE](LICENSE) file for details.
 - [ ] Multi-currency support
 - [ ] Team/organization features
 - [ ] Automated budget recommendations
+
+---
+
+## 🙏 Credits
+
+Created by **Randell Logan Smith and Team Brain** at [Metaphy LLC](https://metaphysicsandcomputing.com)
+
+Part of the HMSS (Heavenly Morning Star System) ecosystem.
 
 ---
 
